@@ -1,0 +1,20 @@
+{
+  "name": "socialdrone",
+  "version": "0.0.1",
+  "description": "Social Drone mola mone",
+  "main": "app.js",
+  "dependencies": {
+    "express": "~3.4.4",
+    "mongoose": "~3.6.2",
+    "body-parser": "^1.5.1",
+    "cookie-parser": "latest",
+    "method-override": "^2.1.2",
+    "morgan": "~1.6.1",
+    "passport": "~0.2.0",
+    "passport-local": "~1.0.0",
+    "passport-facebook": "~1.0.2",
+    "express-session": "~1.13.0",
+    "bcrypt-nodejs": "latest",
+    "connect-flash": "~0.1.1"
+  }
+}

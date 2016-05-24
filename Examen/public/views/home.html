@@ -1,0 +1,63 @@
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-1">
+        <table class="table table-striped">
+            <tr class="info">
+                <td><h3>Subject</h3></td>
+                <td><h3>Ver info</h3></td>
+            </tr>
+            <tr ng-repeat="subj in subject">
+                <td>{{ subj.name }}</td>
+                <td><button ng-click="getInfo(subj._id)">Info</button></td>
+            </tr>
+        </table>
+        <div id="alerts-container"></div>
+        <div id="alerts-"></div>
+    </div>
+    <div class="col-sm-6 col-sm-offset-1">
+        <table class="table table-striped">
+            <tr class="info">
+                <td><h3>Subject</h3></td>
+                <td><h3>Estudiante</h3></td>
+                <td><h3>Direccion</h3></td>
+                <td><h3>Info student</h3></td>
+            </tr>
+            <tr ng-repeat="inf in info2">
+                <td>{{ info1.name }}</td>
+                <td>{{ inf.name }}</td>
+                <td>{{ inf.address }}</td>
+                <td><button ng-click="tlf(inf)">+ info</button> </td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-sm-6 col-sm-offset-1">
+        <table class="table table-striped">
+            <tr class="info">
+                <td><h3>Name tlf</h3></td>
+                <td><h3>tlf</h3></td>
+            </tr>
+            <tr ng-repeat="te in tele">
+                <td>{{ te.name }}</td>
+                <td>{{ te.tlf }}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-sm-4 col-sm-offset-1 text-center">
+        <form name="myForm">
+            <div class="form-group">
+                <input type="text" class="form-control input-lg text-center" placeholder="Nombre estudiante" ng-model="newStudent.name" required>
+                <br>
+                <input type="text" class="form-control input-lg text-center" placeholder="Address" ng-model="newStudent.address">
+                <br>
+                <input type="text" class="form-control input-lg text-center" placeholder="Nombre telefono" ng-model="newStudent.place">
+                <br>
+                <input type="text" class="form-control input-lg text-center" placeholder="Telefono" ng-model="newStudent.tlf">
+                <br>
+                <input type="text" class="form-control input-lg text-center" placeholder="Asignatura" ng-model="newStudent.subject">
+                <br>
+            </div>
+            <!-- Acciones que podemos realizar en el formulario -->
+            <button type="submit" class="btn btn-success btn-lg"  ng-click="addStud()">Añadir estudiante</button>
+        </form>
+
+    </div>
+</div>

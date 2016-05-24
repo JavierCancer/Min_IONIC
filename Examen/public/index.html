@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html ng-app="SocialDrone">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SocialDrone</title>
+    <!-- Cargamos bootstrap -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="navbar navbar-default navbar-static-top" role="navigation" bs-navbar>
+    <div class="navbar-header">
+        <a class="navbar-brand" href="/">
+            <span>Social<strong>Drone</strong></span>
+        </a>
+    </div>
+    <ul class="nav navbar-nav"  >
+
+        <li data-match-route="/$"><a ng-href="/">Home</a></li>
+        <li data-match-route="/add"><a ng-href="/add">Add</a></li>
+        <li data-match-route="/messages"><a ng-href="/messages">Wall</a></li>
+
+    </ul>
+    <ul class="nav navbar-nav pull-right" >
+        <li data-match-route="/login"><a href="/login">Login</a></li>
+        <li data-match-route="/signup"><a href="/signup">Sign up</a></li>
+    </ul>
+    <ul class="nav navbar-nav pull-right" ng-if="currentUser">
+        <li class="navbar-text" ng-bind="currentUser.email"></li>
+        <li><a href="javascript:void(0)" ng-click="logout()">Logout</a></li>
+    </ul>
+</div>
+<div ng-view></div>
+<script src="components/angular/angular.js"></script>
+<script src="components/angular-strap/dist/angular-strap.js"></script>
+<script src="components/angular-strap/dist/angular-strap.tpl.js"></script>
+<script src="components/angular-messages/angular-messages.js"></script>
+<script src="components/angular-resource/angular-resource.js"></script>
+<script src="components/angular-route/angular-route.js"></script>
+<script src="components/angular-animate/angular-animate.js"></script>
+<script src="appRoutes.js"></script>
+<script src="controllers/mainCtrl.js"></script>
+<script src="controllers/addCtrl.js"></script>
+<script src="controllers/messageCtrl.js"></script>
+
+</body>
+</html>
